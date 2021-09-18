@@ -60,7 +60,7 @@ function SpaceImage({ title, date, url }) {
             onClick={() => setLiked(prevState => !prevState)}
             fullWidth
             size='small'
-            variant='outlined'
+            variant={liked ? 'outlined' : 'contained'}
             color='secondary'
           >
             {liked ? 'unlike' : 'like'}
