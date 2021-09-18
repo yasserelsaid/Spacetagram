@@ -6,6 +6,14 @@ Spacestagram: Image-sharing from the final frontier
 
 Created using React, Next.js and Material-UI
 
+## Desktop Screenshot
+
+<img src="public/images/desktop-screenshot.png" alt="Desktop Screenshot" style="border:1px solid #000;"/>
+
+## iPhone x Screenshot
+
+<img src="public/images/mobile-screenshot.png" alt="iPhone x Screenshot" width="260" style="border:1px solid #000;"/>
+
 ## Available Scripts
 
 In the project directory, you can run:
