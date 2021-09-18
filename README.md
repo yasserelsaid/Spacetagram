@@ -1,18 +1,10 @@
-# The Shoppies
+# The Spacetagram
 
-https://the-shoppies-gamma.vercel.app/
+https://spacetagram-theta.vercel.app/
 
-Movie nomination UI for the upcoming shoppies
+Spacestagram: Image-sharing from the final frontier
 
 Created using React, Next.js and Material-UI
-
-## Widescreen Screenshot
-
-<img src="public/images/widescreen_screenshot.png" alt="Widescreen Screenshot" />
-
-## iPhone x Screenshot
-
-<img src="public/images/iphone_screenshot.png" alt="iPhone x Screenshot" width="260"/>
 
 ## Available Scripts
 
