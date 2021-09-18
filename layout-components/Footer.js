@@ -32,7 +32,7 @@ export default function Footer() {
             View project on{' '}
             <a
               className={classes.link}
-              href='https://github.com/yasserelsaid/The_Shoppies'
+              href='https://github.com/yasserelsaid/Spacetagram'
               target='_blank'
             >
               Github
