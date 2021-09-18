@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
 import { IconButton } from '@material-ui/core';
+import Typography from '@material-ui/core/Typography';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 const styles = {
@@ -48,9 +49,13 @@ function SpaceImage({ title, date, url }) {
         )}
 
         <div className={classes.footer}>
-          <p>
-            {title} ({date})
-          </p>
+          <div>
+            <Typography component='p'>{title}</Typography>
+            <Typography component='p' color='textSecondary'>
+              {date}
+            </Typography>
+          </div>
+
           <IconButton
             onClick={() => setLiked(prevState => !prevState)}
             color='secondary'
