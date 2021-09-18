@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { makeStyles } from '@material-ui/core/styles';
-import { Button } from '@material-ui/core';
-
+import { IconButton } from '@material-ui/core';
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import FavoriteBorderIcon from '@material-ui/icons/FavoriteBorder';
 const styles = {
   container: {
     display: 'inline-block',
@@ -15,21 +16,19 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'center',
   },
-  imgAndTitle: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    height: '100%',
-  },
+
   img: {
     borderRadius: '6px ',
     boxShadow:
       '0 5px 15px -8px rgba(0, 0, 0, 0.24) 0 8px 10px -5px rgba(0, 0, 0, 0.2)',
-    margin: '20px',
+    marginBottom: '20px',
+    width: '100%',
   },
-  btnContainer: {
+  footer: {
     marginTop: '5px',
     width: '100%',
+    display: 'flex',
+    justifyContent: 'space-between',
   },
 };
 const useStyles = makeStyles(styles);
@@ -37,34 +36,27 @@ const useStyles = makeStyles(styles);
 function SpaceImage({ title, date, url }) {
   const classes = useStyles();
   const [liked, setLiked] = useState(false);
+  console.log(url);
 
   return (
     <div className={classes.container}>
       <div className={classes.card}>
-        <div className={classes.imgAndTitle}>
-          {url && (
-            <Image
-              className={classes.img}
-              width={290}
-              height={375}
-              src={url}
-              alt={title}
-            />
-          )}
+        {url && (
+          <div>
+            <img className={classes.img} src={url} alt={title} />
+          </div>
+        )}
+
+        <div className={classes.footer}>
           <p>
             {title} ({date})
           </p>
-        </div>
-        <div className={classes.btnContainer}>
-          <Button
+          <IconButton
             onClick={() => setLiked(prevState => !prevState)}
-            fullWidth
-            size='small'
-            variant={liked ? 'outlined' : 'contained'}
             color='secondary'
           >
-            {liked ? 'unlike' : 'like'}
-          </Button>
+            {liked ? <FavoriteIcon /> : <FavoriteBorderIcon />}
+          </IconButton>
         </div>
       </div>
     </div>
